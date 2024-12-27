@@ -1,0 +1,156 @@
+.footer {
+  color: $bs-white;
+  background-color: $title;
+  padding: 80px 12px 15px;
+
+  &-inner {
+    gap: 70px;
+  }
+
+  &-box {
+    margin-bottom: 50px;
+  }
+
+  &-box_social {
+    max-width: 409px;
+  }
+
+  &-box_nav {
+    width: 195px;
+  }
+
+  &-box_contact {
+    max-width: 306px;
+  }
+
+  &-wrapper_list {
+    gap: 5px;
+  }
+
+  &-wrapper_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 20px;
+
+    &:hover .footer-img {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &-fb {
+    background: #3b5998;
+  }
+
+  &-linkedin {
+    background: #0077b5;
+  }
+
+  &-insta {
+    background: #405de6;
+  }
+
+  &-ytb {
+    background: #ff0000;
+  }
+
+  &-img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.4s ease-out 0s;
+    transform: rotateY(0deg);
+  }
+
+  &-text {
+    margin: 25px 0 19px;
+    font-family: $rubik-300;
+    line-height: 1.8;
+
+    &_support {
+      margin: 0 0 15px;
+    }
+  }
+
+  &-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: $jost-500;
+  }
+
+  &-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &-link {
+    color: $bs-white;
+    font-family: $rubik-300;
+    text-decoration: underline transparent;
+    transition: all 0.3s ease-out 0s;
+
+    &:hover {
+      color: $bs-white;
+      text-decoration: underline;
+    }
+  }
+
+  &-button {
+    @include button;
+    padding: 11px 20px;
+    font-size: 16px;
+    font-family: $rubik-400;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid $bs-white;
+    }
+  }
+
+  &-bottom {
+    justify-content: center;
+    gap: 4px;
+    font-family: $rubik-400;
+    padding-top: 18px;
+    font-size: 14px;
+    line-height: 2;
+    border-top: 1px solid rgba(211, 213, 226, 0.1);
+
+    &_text {
+      text-align: center;
+    }
+
+    &_link {
+      color: $hover;
+    }
+
+    &_span {
+      position: relative;
+      padding-left: 17px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../images/icons/heart-hover.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 14px;
+        height: 14px;
+        left: 0;
+        bottom: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+
+    &-bottom {
+      padding-top: 18px;
+      flex-wrap: wrap;
+    }
+  }
+}

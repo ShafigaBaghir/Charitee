@@ -1,0 +1,768 @@
+.home {
+  height: 950px;
+  width: 100%;
+  background-image: url(../images/home-bg.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  left: 0;
+  right: 0;
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 190px;
+    width: 33%;
+  }
+
+  &-title {
+    font-family: $jost-500;
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: $bs-white;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    animation-delay: 0.2s;
+  }
+
+  &-text {
+    font-family: $rubik-300;
+    color: $bs-white;
+    margin-bottom: 41px;
+    font-size: 22px;
+    line-height: 1.5;
+    animation-delay: 0.4s;
+  }
+
+  &-btn {
+    font-family: $rubik-400;
+    color: $bs-white;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 23px 39px;
+    background: $hover;
+    transition: all 0.3s ease-out 0s;
+    animation-delay: 0.8s;
+
+    &:hover {
+      border: 1px solid $bs-white;
+      color: $bs-white;
+      background: none;
+    }
+
+    &-first:hover {
+      background: none;
+    }
+  }
+}
+
+.donate {
+  background-color: #fcf2eb;
+
+  &-inner {
+    align-items: center;
+    padding: 60px 0;
+    gap: 100px;
+  }
+
+  &-box {
+    width: 50%;
+  }
+
+  &-image {
+    width: 100%;
+  }
+
+  &-wrapper {
+    width: 33%;
+  }
+
+  &-span {
+    @include span;
+  }
+
+  &-title {
+    @include title;
+  }
+
+  &-text {
+    @include text;
+  }
+
+  &-buttons {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.button {
+  &-first {
+    @include button;
+    font-family: $rubik-500;
+  }
+
+  &-first {
+    border: 2px solid transparent;
+    transition: all 0.3s ease-out 0s;
+    padding: 17px 35px;
+
+    &:hover {
+      border: 2px solid $button;
+      color: $button;
+    }
+  }
+
+  &-second {
+    @include button-second;
+  }
+}
+
+.about {
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 110px;
+  }
+
+  &-span {
+    @include span;
+  }
+
+  &-title {
+    @include title;
+  }
+
+  &-text {
+    @include text;
+    padding: 20px 0 20px;
+  }
+
+  &-wrapper {
+    width: 41%;
+  }
+
+  &-box {
+    width: 50%;
+  }
+
+  &-image {
+    width: 100%;
+  }
+}
+
+.card {
+  &-inner {
+    gap: 24px;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 19px 18px 20px 29px;
+  }
+
+  &-box {
+    background-color: #f4f2f1;
+
+    &:hover .card-title_link {
+      color: $button;
+      transition: all 0.4s ease-out 0s;
+    }
+
+    &:hover .card-button {
+      background: none;
+      border: 2px solid $button;
+      color: $button;
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+
+  &-title_link {
+    @include card-title;
+  }
+
+  &-image {
+    width: 100%;
+  }
+
+  &-img {
+    width: 100%;
+  }
+
+  &-info {
+    padding: 26px 18px 8px 22px;
+  }
+
+  &-text {
+    @include text;
+    font-size: 16px;
+    margin: 10px 0 15px;
+  }
+
+  &-spans {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &-span_num {
+    color: $hover;
+    font-family: $jost-600;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &-span {
+    color: $title;
+    font-size: 14px;
+    font-family: $rubik-300;
+  }
+
+  &-button {
+    padding: 14px 50px;
+  }
+}
+
+.volunteer {
+  &-inner {
+    display: flex;
+    justify-content: flex-end;
+    gap: 100px;
+  }
+
+  &-box,
+  &-wrapper {
+    width: 50%;
+  }
+
+  &-box {
+    max-width: 525px;
+  }
+
+  &-image {
+    width: 100%;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-span {
+    @include span;
+    margin-bottom: 10px;
+  }
+
+  &-title {
+    @include title;
+  }
+
+  &-text {
+    @include text;
+  }
+
+  &-button {
+    margin: 0 auto;
+    margin-left: 0;
+    @include button-second;
+  }
+}
+
+.help {
+  color: $bs-white;
+  background-image: url(../images/help-bg.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-attachment: fixed;
+
+  &-span_main,
+  &-title_main {
+    text-align: center;
+  }
+
+  &-span_main {
+    font-family: $rubik-400;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &-title_main {
+    @include title;
+    color: $bs-white;
+    margin-bottom: 30px;
+  }
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 205px;
+  }
+
+  &-box {
+    text-align: center;
+  }
+
+  &-image {
+    margin-bottom: 19px;
+  }
+
+  &-title {
+    margin-bottom: 12px;
+    &_link {
+      color: $bs-white;
+      font-family: $rubik-600;
+      font-size: 24px;
+      line-height: 1.4;
+    }
+  }
+
+  &-text {
+    margin-bottom: 24px;
+    font-family: $rubik-300;
+    line-height: 1.6;
+  }
+}
+
+.slider {
+  &-inner {
+    gap: 30px;
+  }
+  &-info {
+    max-width: 330px;
+    width: 100%;
+  }
+  &-info_span {
+    @include span;
+  }
+
+  &-info_title {
+    @include title;
+    margin-bottom: 50px;
+  }
+
+  &-img {
+    width: 100%;
+  }
+
+  &-box {
+    padding: 35px 30px 44px 32px;
+    background: #f4f2f1;
+  }
+
+  &-title {
+    @include card-title;
+  }
+
+  &-text {
+    @include text;
+    font-size: 16px;
+    margin: 0;
+    padding: 15px 0 15px;
+  }
+
+  &-link {
+    color: $button;
+    font-family: $rubik-500;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease-out 0s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: $button;
+      width: 100%;
+      height: 2px;
+      bottom: -11px;
+      left: 0;
+    }
+
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.map {
+  display: flex;
+}
+
+.slider {
+  &-image {
+    max-width: 459px;
+    display: flex;
+  }
+
+  &-img {
+    width: 100%;
+  }
+
+  &-info {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+
+.slick {
+  height: 100%;
+  gap: 20px;
+  flex: 0 0 auto;
+  width: 75%;
+
+  &-slide {
+    font-size: 18px;
+    background: $bs-white;
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .home {
+    &-inner {
+      width: 44%;
+    }
+  }
+
+  .donate {
+    &-box {
+      width: 45%;
+    }
+
+    &-wrapper {
+      width: 54%;
+    }
+
+    &-title {
+      font-size: 40px;
+    }
+  }
+
+  .card {
+    &-title_link {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .home {
+    height: 720px;
+
+    &-inner {
+      width: 52%;
+      padding-top: 80px;
+    }
+  }
+
+  .donate {
+    &-inner {
+      gap: 24px;
+    }
+
+    &-wrapper {
+      width: 50%;
+    }
+  }
+
+  .card {
+    &-button {
+      padding: 10px 17px;
+    }
+  }
+
+  .volunteer {
+    &-inner {
+      gap: 24px;
+    }
+  }
+
+  .help {
+    &-box {
+      width: 33%;
+    }
+
+    &-inner {
+      gap: 24px;
+    }
+  }
+
+  .footer {
+    &-inner {
+      gap: 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .slider {
+    &-inner {
+      flex-direction: column;
+    }
+
+    &-info {
+      margin: 0 24px;
+      width: 100%;
+    }
+  }
+
+  .slick {
+    width: 100%;
+
+    &-slide {
+      width: 444px;
+    }
+  }
+}
+
+@media (max-width: 981px) {
+  .home {
+    height: 580px;
+    &-inner {
+      width: 65%;
+    }
+
+    &-title {
+      font-size: 50px;
+    }
+  }
+
+  .donate {
+    &-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      align-items: center;
+    }
+
+    &-box,
+    &-wrapper {
+      width: 100%;
+    }
+  }
+
+  .about {
+    &-inner {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 50px;
+    }
+
+    &-wrapper {
+      width: 75%;
+    }
+
+    &-box {
+      width: 85%;
+    }
+  }
+
+  .card {
+    &-inner {
+      flex-wrap: wrap;
+    }
+
+    &-title_link {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: 650px;
+    &-inner {
+      width: 66%;
+      padding-top: 70px;
+    }
+  }
+
+  .donate {
+    &-inner {
+      padding: 60px 0;
+    }
+
+    &-title {
+      font-size: 31px;
+    }
+  }
+
+  .about {
+    &-box,
+    &-wrapper {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 31px;
+    }
+  }
+
+  .volunteer {
+    &-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-box,
+    &-wrapper {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 24px;
+    }
+  }
+
+  .help {
+    &-title_main {
+      font-size: 31px;
+    }
+
+    &-inner {
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    &-box {
+      width: 47%;
+    }
+  }
+
+  .slider {
+    &-info {
+      margin: 0 24px 0 -57px;
+    }
+
+    &-inner {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .slick {
+    flex-wrap: wrap;
+    max-width: 459px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home {
+    height: 550px;
+
+    &-inner {
+      width: 100%;
+    }
+
+    &-title {
+      padding-top: 50px;
+      font-size: 35px;
+    }
+
+    &-text {
+      font-size: 18px;
+    }
+  }
+
+  .donate {
+    &-title {
+      font-size: 24px;
+    }
+
+    &-buttons {
+      flex-wrap: wrap;
+    }
+  }
+
+  .about {
+    &-inner {
+      gap: 30px;
+    }
+
+    &-title {
+      font-size: 24px;
+    }
+  }
+
+  .volunteer {
+    &-title {
+      font-size: 24px;
+    }
+  }
+
+  .help {
+    &-inner {
+      gap: 0;
+    }
+    &-title_main {
+      font-size: 31px;
+    }
+
+    &-box {
+      width: 100%;
+    }
+  }
+
+  .card {
+    &-span_num {
+      font-size: 14px;
+    }
+  }
+
+  .slider {
+    &-info_title {
+      font-size: 24px;
+    }
+  }
+}
+
+.slick {
+  &-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &-img {
+    width: 12px;
+    height: 16px;
+    transition: all 0.4s ease-out 0s;
+  }
+}
+
+.arrow-left {
+  transform: rotateY(180deg);
+}
+
+svg {
+  fill: #a2a2a2;
+}
+
+.prev,
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border: 1px solid #d6d6d6;
+  color: #d6d6d6;
+  background: $bs-white;
+  cursor: pointer;
+  transition: all 0.4s ease-out 0s;
+
+  &:hover {
+    color: $bs-white;
+    border: 1px solid $button;
+    background: $button;
+  }
+
+  &:hover svg {
+    fill: $bs-white;
+  }
+}

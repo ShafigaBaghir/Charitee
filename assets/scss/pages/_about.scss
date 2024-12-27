@@ -1,0 +1,40 @@
+.about {
+  &-main {
+    background-image: url(../images/about-bg.webp);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &_title {
+      padding-top: 115px;
+      @include title;
+      font-size: 50px;
+      color: $bs-white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    &-main {
+      height: 350px;
+
+      &_title {
+        padding-top: 90px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    &-main {
+      height: 300px;
+    }
+
+    &-main_title {
+      font-size: 40px;
+    }
+  }
+}
